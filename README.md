@@ -1,18 +1,18 @@
-dashd-rpc.js
+stashd-rpc.js
 ===============
 
-[![NPM Package](https://img.shields.io/npm/v/dashd-rpc.svg?style=flat-square)](https://www.npmjs.org/package/@dashevo/dashd-rpc)
-[![Build Status](https://img.shields.io/travis/dashevo/dashd-rpc.svg?branch=master&style=flat-square)](https://travis-ci.org/dashevo/dashd-rpc)
-[![Coverage Status](https://img.shields.io/coveralls/dashevo/dashd-rpc.svg?style=flat-square)](https://coveralls.io/r/dashevo/dashd-rpc?branch=master)
+[![NPM Package](https://img.shields.io/npm/v/stashd-rpc.svg?style=flat-square)](https://www.npmjs.org/package/@stashcore/stashd-rpc)
+[![Build Status](https://img.shields.io/travis/stashpayio/stashd-rpc.svg?branch=master&style=flat-square)](https://travis-ci.org/stashpayio/stashd-rpc)
+[![Coverage Status](https://img.shields.io/coveralls/stashpayio/stashd-rpc.svg?style=flat-square)](https://coveralls.io/r/stashpayio/stashd-rpc?branch=master)
 
-A client library to connect to Dash Core RPC in JavaScript.
+A client library to connect to Stash Core RPC in JavaScript.
 
 ## Get Started
 
-dashd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
+stashd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install @dashevo/dashd-rpc
+npm install @stashcore/stashd-rpc
 ```
 
 ## RpcClient
@@ -27,8 +27,8 @@ Config parameters :
 
 Promise vs callback based
 
-  - `require('bitcoind-rpc-dash/promise')` to have promises returned
-  - `require('bitcoind-rpc-dash')` to have callback functions returned
+  - `require('bitcoind-rpc-stash/promise')` to have promises returned
+  - `require('bitcoind-rpc-stash')` to have callback functions returned
 	
 ## Examples
 
@@ -36,7 +36,7 @@ Config:
 ```javascript
 var config = {
     protocol: 'http',
-    user: 'dash',
+    user: 'stash',
     pass: 'local321',
     host: '127.0.0.1',
     port: 19998
@@ -45,7 +45,7 @@ var config = {
 
 Promise based:
 ```javascript
-var RpcClient = require('bitcoind-rpc-dash/promise');
+var RpcClient = require('bitcoind-rpc-stash/promise');
 var rpc = new RpcClient(config);
 
 rpc.getRawMemPool()
@@ -67,7 +67,7 @@ Callback based (legacy):
 ```javascript
 var run = function() {
   var bitcore = require('bitcore');
-  var RpcClient = require('bitcoind-rpc-dash');
+  var RpcClient = require('bitcoind-rpc-stash');
   var rpc = new RpcClient(config);
 
   var txids = [];
@@ -112,10 +112,10 @@ var run = function() {
 
 You can dynamically access to the help of each method by doing
 ```
-const RpcClient = require('bitcoind-rpc-dash');
+const RpcClient = require('bitcoind-rpc-stash');
 var client = new RPCclient({
     protocol:'http',
-    user: 'dash',
+    user: 'stash',
     pass: 'local321', 
     host: '127.0.0.1', 
     port: 19998
