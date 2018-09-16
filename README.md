@@ -27,8 +27,8 @@ Config parameters :
 
 Promise vs callback based
 
-  - `require('bitcoind-rpc-stash/promise')` to have promises returned
-  - `require('bitcoind-rpc-stash')` to have callback functions returned
+  - `require('stashd-rpc/promise')` to have promises returned
+  - `require('stashd-rpc')` to have callback functions returned
 	
 ## Examples
 
@@ -45,7 +45,7 @@ var config = {
 
 Promise based:
 ```javascript
-var RpcClient = require('bitcoind-rpc-stash/promise');
+var RpcClient = require('stashd-rpc/promise');
 var rpc = new RpcClient(config);
 
 rpc.getRawMemPool()
@@ -67,7 +67,7 @@ Callback based (legacy):
 ```javascript
 var run = function() {
   var bitcore = require('bitcore');
-  var RpcClient = require('bitcoind-rpc-stash');
+  var RpcClient = require('stashd-rpc');
   var rpc = new RpcClient(config);
 
   var txids = [];
@@ -112,7 +112,7 @@ var run = function() {
 
 You can dynamically access to the help of each method by doing
 ```
-const RpcClient = require('bitcoind-rpc-stash');
+const RpcClient = require('stashd-rpc');
 var client = new RPCclient({
     protocol:'http',
     user: 'stash',
