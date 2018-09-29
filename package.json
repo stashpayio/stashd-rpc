@@ -1,7 +1,7 @@
 {
   "name": "@stashcore/stashd-rpc",
   "description": "Stash Client Library to connect to Stash Core (stashd) via RPC",
-  "version": "1.1.0",
+  "version": "1.1.10",
   "author": {
     "name": "Stephen Pair",
     "email": "stephen@bitpay.com"
