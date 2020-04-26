@@ -3,7 +3,6 @@ stashd-rpc.js
 
 [![NPM Package](https://img.shields.io/npm/v/stashd-rpc.svg?style=flat-square)](https://www.npmjs.org/package/@stashcore/stashd-rpc)
 [![Build Status](https://img.shields.io/travis/stashpayio/stashd-rpc.svg?branch=master&style=flat-square)](https://travis-ci.org/stashpayio/stashd-rpc)
-[![Coverage Status](https://img.shields.io/coveralls/stashpayio/stashd-rpc.svg?style=flat-square)](https://coveralls.io/r/stashpayio/stashd-rpc?branch=master)
 
 A client library to connect to Stash Core RPC in JavaScript.
 
@@ -15,7 +14,9 @@ stashd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm]
 npm install @stashcore/stashd-rpc
 ```
 
-## RpcClient
+## Usage
+
+### RpcClient
 
 Config parameters : 
 
@@ -108,7 +109,7 @@ var run = function() {
 };
 ```
 
-## Help 
+### Help
 
 You can dynamically access to the help of each method by doing
 ```
@@ -124,11 +125,18 @@ var client = new RPCclient({
 var cb = function (err, data) {
     console.log(data)
 };
-client.help(cb); //Get full help
-client.help('getinfo',cb); //Get help of specific method
+
+// Get full help
+client.help(cb);
+
+// Get help of specific method
+client.help('getinfo',cb);
 ```
+
+## Contributing
+
+Feel free to dive in! [Open an issue](https://github.com/dashevo/dash-std-template/issues/new) or submit PRs.
+
 ## License
 
-**Code released under [the MIT license](https://github.com/bitpay/bitcore/blob/master/LICENSE).**
-
-Copyright 2013-2014 BitPay, Inc.
+[MIT](LICENSE) &copy; Dash Core Group, Inc.
